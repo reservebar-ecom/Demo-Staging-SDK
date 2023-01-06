@@ -7,8 +7,13 @@
 .crt {
     max-width: 900px;
     width: 100%;
+    padding: 1rem;
 }
 
 .liquid-cart-bottom-container {
   position: inherit;
+}
+
+.liquid-cart-page{
+  min-height: calc(100vh - 300px);
 }

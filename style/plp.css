@@ -13,6 +13,7 @@
 
 .plp {
   max-width: 1200px;
+  padding: 1rem;
 }
 
 .hero-img {
@@ -46,7 +47,7 @@
   .pdp-cards-wrapper{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     padding: 4rem;
   }
   
@@ -77,3 +78,17 @@
   }
 
   
+  @media only screen and (max-width: 768px) {
+    .store-name {
+      font-size: 3rem;
+    }
+
+    .liquid-pim-img{
+      max-width: 100%;
+    }
+
+    .pdp-cards-wrapper{
+      padding: 1rem 0;
+    }
+  
+  }
