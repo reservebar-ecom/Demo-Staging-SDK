@@ -1,96 +1,99 @@
 <html>
 
 <head>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
-    </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+  </style>
 
-    <!-- SDK -->
-    <link rel="stylesheet"
-        href="https://cdn.liquidcheckout.com/liquid-sdk-7b4d90f3ff262e44b5414961faf42123.css" />
-    <script type="text/javascript"
-        src="https://cdn.liquidcheckout.com/liquid-sdk-7b4d90f3ff262e44b5414961faf42123.js"></script>
+  <!-- SDK -->
+  <link rel="stylesheet" href="https://cdn.liquidcheckout.com/liquid-sdk-7b4d90f3ff262e44b5414961faf42123.css" />
+  <script type="text/javascript"
+    src="https://cdn.liquidcheckout.com/liquid-sdk-7b4d90f3ff262e44b5414961faf42123.js"></script>
 
-    <title>Product</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/index.css" />
-    <link rel="stylesheet" href="./style/pdp.css" />
+  <title>Product</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/index.css" />
+  <link rel="stylesheet" href="./style/pdp.css" />
 </head>
 
 <body>
-    <div class="pdp-wrapper">
-        <div class="pdp">
-            <div class="navbar">
-                <a class="logo-link" href="/dev-sdk">HOME</a>
-                <a class="cart-link" href="/dev-sdk">CART</a>
-                <div liquid-cart-icon></div>	
-            </div>
-            <div liquid-error></div>
-            <div liquid-cart></div>	
-
-            <div liquid-address-typeahead>Address auto complete</div>
-            <div liquid-id="">
-              <div>
-                <span liquid-pim-img="main_image"></span>
-              </div>
-      
-              <div class="product-details">
-                <h1 liquid-pim-value="title"></h1>
-                <b liquid-price></b>
-                <p liquid-pim-value="product_description"></p>
-      
-                <span liquid-fulfillment-method-selector></span>
-                <span liquid-engraving-lines></span>
-      
-                <div class="atc-wrapper">
-                  <span liquid-size-select-dropdown></span>
-                  <span liquid-qty-selector></span>
-                  <div liquid-atc onclick="liquidSDK.cart.toggle();"></div>
-                </div>
-      
-                <small class="ship-availability">
-                  <b>This product can shipped to: </b>
-                  <span liquid-ship-availability></span>
-                </small>
-              </div>
-            </div>
-      
-            <div liquid-cart>CART</div>
-      
-            <p class="rb-disclaimer">
-              <small>
-                All alcohol orders are sold and shipped by licensed retailers on the
-                ReserveBar.com network. Liquid SDK <span liquid-version></span>
-              </small>
-            </p>
+  <div class="pdp-wrapper">
+    <div class="pdp">
+      <div class="navbar">
+        <a class="logo-link" href="/dev-sdk">HOME</a>
+        <div class="cart-icon-wrapper">
+          <a class="logo-link" href="/cart.html">CART</a>
+          <div liquid-cart-icon></div>
         </div>
-    </div>
-    <script>
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const groupingId = urlParams.get('groupingId');
+      </div>
+      <div liquid-error></div>
+      <div liquid-cart></div>
 
-        const liquidId = document.querySelector('[liquid-id]');
-        liquidId.setAttribute('liquid-id', groupingId);
-        console.log('#groupingId',groupingId);
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => { 
-                liquidSDK.init({
-                    clientId: "7b4d90f3ff262e44b5414961faf42123",
-                    includeMerchandise: true,
-                })
-            }
-        );
-    </script>
-    <script>
-      document.querySelector('.close-wrapper').onclick = function(){
-        document.querySelector('.general-style').style.display = 'none';
-      }
-    </script>
+      <div liquid-address-typeahead>Address auto complete</div>
+      <div liquid-id="">
+        <div>
+          <span liquid-pim-img="main_image"></span>
+        </div>
+
+        <div class="product-details">
+          <h1 liquid-pim-value="title"></h1>
+          <b liquid-price></b>
+          <p liquid-pim-value="product_description"></p>
+
+          <span liquid-fulfillment-method-selector></span>
+          <span liquid-engraving-lines></span>
+
+          <div class="atc-wrapper">
+            <span liquid-size-select-dropdown></span>
+            <span liquid-qty-selector></span>
+            <div liquid-atc onclick="liquidSDK.cart.toggle();"></div>
+          </div>
+
+          <small class="ship-availability">
+            <b>This product can shipped to: </b>
+            <span liquid-ship-availability></span>
+          </small>
+        </div>
+      </div>
+
+      <div liquid-cart>CART</div>
+
+      <p class="rb-disclaimer">
+        <small>
+          All alcohol orders are sold and shipped by licensed retailers on the
+          ReserveBar.com network. Liquid SDK <span liquid-version></span>
+        </small>
+      </p>
+    </div>
+  </div>
+  <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const groupingId = urlParams.get('groupingId');
+
+    const liquidId = document.querySelector('[liquid-id]');
+    liquidId.setAttribute('liquid-id', groupingId);
+    console.log('#groupingId', groupingId);
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      liquidSDK.init({
+        clientId: "7b4d90f3ff262e44b5414961faf42123",
+        includeMerchandise: true,
+      })
+    }
+    );
+  </script>
+  <script>
+    document.querySelector('.close-wrapper').onclick = function () {
+      document.querySelector('.general-style').style.display = 'none';
+    }
+  </script>
 </body>
 
 </html>
