@@ -1,42 +1,70 @@
 <html>
 
 <head>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+    </style>
+
+    <!-- SDK -->
     <link rel="stylesheet"
         href="https://cdn.liquidcheckout.com/liquid-sdk-7b4d90f3ff262e44b5414961faf42123.css" />
     <script type="text/javascript"
         src="https://cdn.liquidcheckout.com/liquid-sdk-7b4d90f3ff262e44b5414961faf42123.js"></script>
-    <link rel="stylesheet" href="./pdp.css" />
+
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./plp.css" />
+  
 </head>
 
 <body>
-    <div>
-        <div liquid-error></div>
-        <div liquid-address-typeahead>Address auto complete</div>
-        <div class="pdp-cards-wrapper">
-            <div liquid-id="GROUPING-1281688" class="pdp-card">
-                <span liquid-pim-img="main_image"></span>
-                <span liquid-plp-details></span>
-                <a class="pdp-link" target="_blank"
-                    href="/?path=/docs/sdk-pages-product-detail-page-custom--product-detail-page-custom&args=GROUPING_ID:GROUPING-1281688">
-                    See Product
-                </a>
+    <div class="plp-wrapper">
+        <div class="plp">
+            <div class="navbar">
+                <a class="logo-link" href="/">LOGO</a>
+                <div liquid-cart-icon></div>	
             </div>
-            <div liquid-id="GROUPING-1771769" class="pdp-card">
-                <span liquid-pim-img="main_image"></span>
-                <span liquid-plp-details></span>
-                <a class="pdp-link" target="_blank"
-                    href="/?path=/docs/sdk-pages-product-detail-page-custom--product-detail-page-custom&args=GROUPING_ID:GROUPING-1771769">
-                    See Product
-                </a>
+            <h1 class="store-name">Your Store</h1>
+            <img class="hero-img" src="./assets/hero.jpg">
+            <div liquid-error></div>
+            <div liquid-cart></div>	
+
+            <div liquid-address-typeahead>Address auto complete</div>
+            <div class="pdp-cards-wrapper">
+                <div liquid-id="GROUPING-1281688" class="pdp-card">
+                    <span liquid-pim-img="main_image"></span>
+                    <span liquid-plp-details></span>
+                    <a class="pdp-link" target="_blank"
+                        href="/PDP.html?groupingId=GROUPING-1281688">
+                        See Product
+                    </a>
+                </div>
+                <div liquid-id="GROUPING-1771769" class="pdp-card">
+                    <span liquid-pim-img="main_image"></span>
+                    <span liquid-plp-details></span>
+                    <a class="pdp-link" target="_blank"
+                        href="/PDP.html?groupingId=GROUPING-1771769">
+                        See Product
+                    </a>
+                </div>
+                <div liquid-id="GROUPING-1558953" class="pdp-card">
+                    <span liquid-pim-img="main_image"></span>
+                    <span liquid-plp-details></span>
+                    <a class="pdp-link" target="_blank"
+                        href="/PDP.html?groupingId=GROUPING-1558953">
+                        See Product
+                    </a>
+                </div>
             </div>
-            <div liquid-id="GROUPING-1558953" class="pdp-card">
-                <span liquid-pim-img="main_image"></span>
-                <span liquid-plp-details></span>
-                <a class="pdp-link" target="_blank"
-                    href="/?path=/docs/sdk-pages-product-detail-page-custom--product-detail-page-custom&args=GROUPING_ID:GROUPING-1558953">
-                    See Product
-                </a>
-            </div>
+            <p class="rb-disclaimer">
+                <small>
+                  All alcohol orders are sold and shipped by licensed retailers on the
+                  ReserveBar.com network. Liquid SDK <span liquid-version></span>
+                </small>
+              </p>
         </div>
     </div>
     <script>

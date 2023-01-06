@@ -1,14 +1,38 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-    <title>Cart</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+    </style>
+
+    <!-- SDK -->
+    <link rel="stylesheet"
+        href="https://cdn.liquidcheckout.com/liquid-sdk-7b4d90f3ff262e44b5414961faf42123.css" />
+    <script type="text/javascript"
+        src="https://cdn.liquidcheckout.com/liquid-sdk-7b4d90f3ff262e44b5414961faf42123.js"></script>
+
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./cart.css" />
 </head>
 
 <body>
-
-
-
+    <div class="crt-wrapper">
+        <div class="crt">
+            <div liquid-cart-page></div>	
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => { 
+                liquidSDK.init({
+                    clientId: "7b4d90f3ff262e44b5414961faf42123",
+                    includeMerchandise: true,
+                })
+            }
+        );
+    </script>
 </body>
 
 </html>

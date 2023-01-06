@@ -1,48 +1,113 @@
-.liquid-address-typeahead > input {
+
+.pdp-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.pdp {
+  max-width: 1200px;
+}
+
+div[liquid-id] {
+    display: flex;  
+  }
+  
+  .liquid-pim-img {
+    max-width: 600px;
+    margin-top: 2rem;
+  }
+  
+  span[liquid-qty-selector] {
+    padding: 0rem 1rem;
+  }
+  
+  .liquid-cart-qty-selector {
+    padding: 7px 10px;
+    width: 150px;
+    border-color: #4d4d4d;
+    color: #4d4d4d; 
+  }
+  
+  .liquid-fulfillment-method-selector {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .liquid-fulfillment-method-selector > div {
+    border-radius: 1px;
+  }
+  
+  .liquid-engraving-form-enabled > input, .liquid-engraving-view, 
+  .liquid-engraving-edit, span[liquid-engraving-lines] > div {
+    border-radius: 1px;
+  }
+  
+  .liquid-product-group-size-select-dropdown {
+    width: 150px;
+    padding: 7px 10px !important;
+    border-color: #4d4d4d;
+    color: #4d4d4d;
+  }
+  
+  div[liquid-atc]{
+    width: 100%;
+  }
+  
+  .liquid-fulfillment-expectation, .liquid-price {
+    font-weight: bolder; 
+  }
+  
+  .liquid-cart-atc {
+    width: 100%;
+    background: #1EA7FD;
+    border-radius: 1px;
+    height: 35px;
+    line-height: normal !important;
     border: none;
-    background: #F6F9FC;
-    color: #1EA7FD;
+    font-weight: lighter;
+  }
+  
+  .atc-wrapper {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+  }
+    
+  .product-details {
+    padding: 1rem 2rem;
+    color: #4d4d4d;
+  }
+  
+
+  .liquid-address-typeahead{
+    margin-top: 2rem;
+  }
+
+  .liquid-address-typeahead input{
+    border: none;
     border-radius: 0px;
     text-align: center;
-    margin-bottom: 2rem;
+    color: #1EA7FD;
+    background: #F6F9FC;
   }
   
-  span[liquid-plp-details] {
-    margin-top: auto;
+  .ship-availability {
+    color: gray;
   }
   
-  .pdp-card {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 1rem;
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
-  }
+  @media only screen and (max-width: 768px) {
+    div[liquid-id] {
+      flex-wrap: wrap;
+    }
   
-  .pdp-cards-wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+    .liquid-pim-img {
+      min-width: 100%;
+      width: 100%;
+    }
   
-  .pdp-link {
-    text-decoration: none;
-    background: #1EA7FD;
-    color: white;
-    padding: 0.5rem 2rem;
-    margin: 0.5rem;
-  }
-  
-  .liquid-price{
-    text-align: center;
-    font-weight: bolder;
-    margin-bottom: .5rem;
-  }
-  
-  .liquid-plp-details > .liquid-availability:before {
-    background-color: #1EA7FD;
-  }
-  
-  .liquid-availability{
-    padding-bottom: 0.25rem;
+    .product-details {
+      padding: 1rem;
+    }
   }
