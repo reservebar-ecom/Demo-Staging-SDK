@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <link rel="stylesheet"
+        href="https://cdn-staging.liquidcheckout.com/liquid-sdk-your-production-c6b5825125289e94f62aeb24b83062ea.css" />
+    <script type="text/javascript"
+        src="https://cdn-staging.liquidcheckout.com/liquid-sdk-c6b5825125289e94f62aeb24b83062ea.js"></script>
+    <link rel="stylesheet" href="./pdp.css" />
+</head>
+
+<body>
+    <div>
+        <div liquid-error></div>
+        <div liquid-address-typeahead>Address auto complete</div>
+        <div class="pdp-cards-wrapper">
+            <div liquid-id="GROUPING-1281688" class="pdp-card">
+                <span liquid-pim-img="main_image"></span>
+                <span liquid-plp-details></span>
+                <a class="pdp-link" target="_blank"
+                    href="/?path=/docs/sdk-pages-product-detail-page-custom--product-detail-page-custom&args=GROUPING_ID:GROUPING-1281688">
+                    See Product
+                </a>
+            </div>
+            <div liquid-id="GROUPING-1771769" class="pdp-card">
+                <span liquid-pim-img="main_image"></span>
+                <span liquid-plp-details></span>
+                <a class="pdp-link" target="_blank"
+                    href="/?path=/docs/sdk-pages-product-detail-page-custom--product-detail-page-custom&args=GROUPING_ID:GROUPING-1771769">
+                    See Product
+                </a>
+            </div>
+            <div liquid-id="GROUPING-1558953" class="pdp-card">
+                <span liquid-pim-img="main_image"></span>
+                <span liquid-plp-details></span>
+                <a class="pdp-link" target="_blank"
+                    href="/?path=/docs/sdk-pages-product-detail-page-custom--product-detail-page-custom&args=GROUPING_ID:GROUPING-1558953">
+                    See Product
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => { 
+                liquidSDK.init({
+                    clientId: "c6b5825125289e94f62aeb24b83062ea",
+                    includeMerchandise: true,
+                })
+            }
+        );
+    </script>
+</body>
+
+</html>
