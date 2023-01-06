@@ -6,7 +6,8 @@ html,body {
   .logo-link {
     font-family: 'Syne Mono', monospace;
     color: rgb(5, 27, 46);
-    padding-top: 1rem;
+    padding-top: 0.75rem;
+    padding-right: 0.5rem;
     font-size: 1.125rem;
   }
   
