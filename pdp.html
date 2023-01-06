@@ -65,6 +65,24 @@
             </p>
         </div>
     </div>
+
+    <div class="general-style-wrapper">
+      <div class="general-style">
+        <div class="close-wrapper">✕</div>
+        <label>Primary Color</label>
+        <input type="color" id="primaryColor" name="primaryColor" value="#323333">
+  
+        <label>Secondary Color</label>
+        <input type="color" id="secondaryColor" name="secondaryColor" value="#557788">
+  
+        <label>Primary Font</label>
+        <input type="text" id="primaryFont" name="primaryFont">
+  
+        <label>Secondary Font</label>
+        <input type="text" id="secondaryFont" name="secondaryFont">
+  
+      </div>
+    </div>
     <script>
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
@@ -82,6 +100,11 @@
                 })
             }
         );
+    </script>
+    <script>
+      document.querySelector('.close-wrapper').onclick = function(){
+        document.querySelector('.general-style').style.display = 'none';
+      }
     </script>
 </body>
 

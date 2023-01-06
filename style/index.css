@@ -46,3 +46,35 @@ html,body {
     border: none;
     font-weight: lighter;
 }
+
+
+.general-style-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100vh;
+}
+
+.general-style{
+  width: 300px;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.general-style label {
+  margin-top: 1rem;
+}
+
+.close-wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0.5rem;
+}
