@@ -1,22 +1,22 @@
 <html>
 
 <head>
-    <title>Cart</title>
+    <title>Gift Card</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
     <!-- SDK -->
     <link rel="stylesheet" href="https://cdn.liquidcheckout.com/liquid-sdk-7b4d90f3ff262e44b5414961faf42123.css" />
     <script type="text/javascript"
         src="https://cdn.liquidcheckout.com/liquid-sdk-7b4d90f3ff262e44b5414961faf42123.js"></script>
-  
+
     <!-- Custom Style -->
     <link rel="stylesheet" href="./style/index.css" />
-    <link rel="stylesheet" href="./style/plp.css" />
-  </head>
+    <link rel="stylesheet" href="./style/gift-card.css" />
+</head>
 
 <body>
-    <div class="crt-wrapper">
-        <div class="crt">
+    <div class="gc-wrapper">
+        <div class="gc">
             <div class="navbar">
                 <a class="logo-link" href="/dev-sdk">HOME</a>
                 <div class="cart-icon-wrapper">
@@ -24,7 +24,30 @@
                     <div liquid-cart-icon></div>
                 </div>
             </div>
-            <div liquid-cart-page></div>
+            <div liquid-error></div>
+            <div liquid-cart></div>
+
+            <div liquid-address-typeahead>Address auto complete</div>
+
+            <div liquid-id="GROUPING-GIFTCARD-1972509" class="gift-card-wrapper">
+
+                <span liquid-pim-img="main_image"></span>
+
+                <div class="product-details">
+                    <div liquid-id="GROUPING-GIFTCARD-1972509" liquid-gift-card-prices></div>
+                    <div liquid-gift-card-recipients-field></div>
+                    <div class="gift-card-sender-wrapper">
+                      <div liquid-gift-card-sender-field></div>
+                      <div liquid-gift-card-send-date-field></div>
+                    </div>
+                    <div liquid-gift-card-message-field></div>
+                    <div liquid-gift-card-to-field></div>
+                    <div liquid-gift-card-atc></div>
+                </div>
+            </div>
+
+            <div liquid-cart>CART</div>
+
             <p class="rb-disclaimer">
                 <small>
                     All alcohol orders are sold and shipped by licensed retailers on the
@@ -37,7 +60,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             liquidSDK.init({
                 clientId: "7b4d90f3ff262e44b5414961faf42123",
-                includeMerchandise: true,
             })
         }
         );

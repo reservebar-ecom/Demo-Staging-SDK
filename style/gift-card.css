@@ -1,0 +1,21 @@
+
+.gc-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .gc {
+    max-width: 1200px;
+    padding: 1rem;
+  }
+
+.gift-card-wrapper{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+img {
+    max-width: 500px;
+}
