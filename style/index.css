@@ -3,9 +3,11 @@ html,body {
     padding: 0;
   }
   
+a {
+  text-decoration: none;
+}
+
   .logo-link {
-    font-family: 'Syne Mono', monospace;
-    color: rgb(5, 27, 46);
     padding-top: 0.75rem;
     padding-right: 0.5rem;
     font-size: 1.125rem;
@@ -15,7 +17,6 @@ html,body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid lightgrey;
     padding: 2rem 0;
     align-items: center;
     background-color: white;
@@ -26,22 +27,16 @@ html,body {
     text-align: center;
     margin-top: 1rem;
     color: gray;
-    font-size: 10px;
+    font-size: 14px;
     text-transform: uppercase;
     border-top: 1px solid #F6F9FC;
     padding-top: 2rem;
     padding-bottom: 3rem;
   }
 
-  .liquid-cart-item-image {
-    border: none;
-    mix-blend-mode: multiply;
-}
 
 .liquid-checkout-button{
     width: 100%;
-    background: #1EA7FD;
-    border-radius: 1px;
     height: 35px;
     line-height: normal !important;
     border: none;

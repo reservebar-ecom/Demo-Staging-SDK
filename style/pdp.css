@@ -15,42 +15,14 @@ div[liquid-id] {
   }
   
   .liquid-pim-img {
-    max-width: 600px;
-    margin-top: 2rem;
+    max-width: 700px;
   }
   
   span[liquid-qty-selector] {
     padding: 0rem 1rem;
   }
   
-  .liquid-cart-qty-selector {
-    padding: 7px 10px;
-    width: 150px;
-    border-color: #4d4d4d;
-    color: #4d4d4d; 
-  }
-  
-  .liquid-fulfillment-method-selector {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  
-  .liquid-fulfillment-method-selector > div {
-    border-radius: 1px;
-  }
-  
-  .liquid-engraving-form-enabled > input, .liquid-engraving-view, 
-  .liquid-engraving-edit, span[liquid-engraving-lines] > div {
-    border-radius: 1px;
-  }
-  
-  .liquid-product-group-size-select-dropdown {
-    width: 150px;
-    padding: 7px 10px !important;
-    border-color: #4d4d4d;
-    color: #4d4d4d;
-  }
-  
+
   div[liquid-atc]{
     width: 100%;
   }
@@ -59,15 +31,6 @@ div[liquid-id] {
     font-weight: bolder; 
   }
   
-  .liquid-cart-atc {
-    width: 100%;
-    background: #1EA7FD;
-    border-radius: 1px;
-    height: 35px;
-    line-height: normal !important;
-    border: none;
-    font-weight: lighter;
-  }
   
   .atc-wrapper {
     display:flex;
@@ -75,29 +38,16 @@ div[liquid-id] {
     justify-content: space-between;
     margin: 1rem 0;
   }
+
+  .atc-wrapper select {
+    width: 85px;
+  }
     
   .product-details {
-    padding: 1rem 2rem;
-    color: #4d4d4d;
+    padding: 1rem 0rem;
   }
-  
+ 
 
-  .liquid-address-typeahead{
-    margin-top: 2rem;
-  }
-
-  .liquid-address-typeahead input{
-    border: none;
-    border-radius: 0px;
-    text-align: center;
-    color: #1EA7FD;
-    background: #F6F9FC;
-  }
-  
-  .ship-availability {
-    color: gray;
-  }
-  
   @media only screen and (max-width: 768px) {
     div[liquid-id] {
       flex-wrap: wrap;
