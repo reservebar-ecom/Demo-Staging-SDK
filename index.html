@@ -29,6 +29,7 @@
             <div liquid-error></div>
             <div liquid-cart></div>
 
+            <button id="setAddressButton">Click to Set Address</button>
             <div liquid-address-typeahead>Address auto complete</div>
             <div class="pdp-cards-wrapper">
 
@@ -61,10 +62,34 @@
         </div>
     </div>
     <script>
+
+
+
         document.addEventListener('DOMContentLoaded', () => {
             liquidSDK.init({
                 clientId: "7b4d90f3ff262e44b5414961faf42123",
-            })
+            });
+
+            setAddressButton.onclick = function () {
+
+                const addressObject = {
+                    address1: "199 Exeter",
+                    city: "Irvine",
+                    latitude: 33.650959,
+                    longitude: -117.8305219,
+                    state: "CA",
+                    zipCode: "92612",
+                    placeId: "ChIJARIB-uHd3IARVYXNItabJqE"
+                };
+
+                liquidSDK.address.set(addressObject);
+
+                document
+                    .querySelector('[liquid-address-typeahead]')
+                    .querySelector('input').value =
+                    `${addressObject.address1}, ${addressObject.city},  ${addressObject.state} ${addressObject.zipCode}`;
+            }
+
         }
         );
     </script>
