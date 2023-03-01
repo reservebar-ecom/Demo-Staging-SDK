@@ -29,6 +29,7 @@
             <div liquid-error></div>
             <div liquid-cart></div>
 
+            <button id="setAddressButton">Set Address</button>
             <div liquid-address-typeahead>Address auto complete</div>
             <div class="pdp-cards-wrapper">
 
@@ -62,9 +63,19 @@
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+
             liquidSDK.init({
                 clientId: "7b4d90f3ff262e44b5414961faf42123",
-            })
+            });
+
+            document.querySelector('#setAddressButton').onclick = function(){
+                liquidSDK.init({
+                clientId: "7b4d90f3ff262e44b5414961faf42123",
+                latitude: 40.82627868652344,
+                longitude: -73.96682739257812,
+                shipState: 'NY',
+            });
+            }
         }
         );
     </script>
